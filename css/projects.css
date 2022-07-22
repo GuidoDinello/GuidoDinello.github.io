@@ -1,0 +1,66 @@
+.container-items {
+    width: 350px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    justify-content: center;
+    grid-gap: 15%;
+    row-gap: 0;
+}
+
+section article {
+    background-color: #E2EFF3;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0;
+}
+
+section article h2, section article p {
+    margin: 1rem;
+}
+
+
+section article:hover{
+    transition: box-shadow 0.3s ease,
+                transform 0.1s ease-out;
+    transform: scale(1.005);
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);
+    /*
+    d = desplazamiento_sombra
+    box-shadow: d_der d_abajo difuminacion_sombra color
+    */
+    cursor: pointer;
+}
+
+article.project img {
+    width: 350px;
+    height: 350px;
+}
+
+article.project div {
+    margin: 1rem;
+    font-size: 1rem;
+}
+
+article.project span.language-tag {
+    background-color: #1fe426;
+    /* border-color: black;
+    border-width: 25px; */
+    border-style: solid;
+    border-color: green;
+    border-width: 2px;
+    border-radius: 15%;
+    padding: 2px 5px; 
+}
+
+article.project a {
+    text-decoration: none;
+    color: blue;
+    text-align: center;
+    margin: 1rem;   
+}
+
+article.project a:visited{
+    color: rgb(12, 3, 46);
+}

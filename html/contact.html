@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="../css/styles.css">
         <link rel="stylesheet" href="../css/form.css">
 
+        <script src="../js/form.js"></script>
+
         <title> Contact Page </title> 
 
     </head>
@@ -24,7 +26,7 @@
             </nav>
         </header>
             <section class="container-items">
-                <form action="/form" method="POST">
+                <form id="form" action="" method="POST">
                     <label for="name">Name:</label>
                     <input type="text" name="name" id="name"
                     placeholder="Name Surname"/>
@@ -38,9 +40,10 @@
                     placeholder="Write your message..."></textarea>
 
 
-                    <button type="submit"><img src="../img/email-solid.png"><span>Send</span></button>
+                    <button type="submit" id="submitter"><img src="../img/email-solid.png"><span>Send</span></button>
 
                 </form>
+                <!-- <p id="ty-note">probando</p> -->
             </section>
         <footer>
             <section>
