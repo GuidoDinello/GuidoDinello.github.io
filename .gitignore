@@ -1,0 +1,4 @@
+
+# ignore hidden fodlers created by vscode
+.vscode/
+
