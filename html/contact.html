@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+         
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/form.css">
+
+        <title> Contact Page </title> 
+
+    </head>
+    <body>
+        <header id="inicio">
+            <h1> Contact Me </h1>
+
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+            <section class="container-items">
+                <form action="/form" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name"
+                    placeholder="Name Surname"/>
+
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="your_email@domain.com"
+                    vaue="empty"/>
+
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" cols="30" rows="10"
+                    placeholder="Write your message..."></textarea>
+
+
+                    <button type="submit"><img src="../img/email-solid.png"><span>Send</span></button>
+
+                </form>
+            </section>
+        <footer>
+            <section>
+                <ul class="social-icons">
+                    <li> 
+                        <a href="https://www.facebook.com/" class="icon" target="_blank">
+                        <img alt="" src="../img/icons/facebook.png">
+                        </a>
+                    </li>
+                    <li> 
+                        <a href="https://www.twitter.com/" class="icon" target="_blank">
+                            <img alt="" src="../img/icons/twitter.png">
+                        </a>
+                    </li>
+                    <li> 
+                        <a href="https://www.instagram.com/" class="icon" target="_blank">
+                            <img alt="" src="../img/icons/instagram.png">
+                        </a>
+                    </li>
+                    <li> 
+                        <a href="https://github.com/GuidoDinello" class="icon" target="_blank">
+                            <img alt="" src="../img/icons/github.png">
+                        </a>
+                    </li>
+                    <li> 
+                        <a href="https://www.linkedin.com/in/guido-dinello-morais-48875b217" class="icon" target="_blank">
+                            <img alt="" src="../img/icons/linkedin.png">
+                        </a>
+                    </li>
+            </section>
+            <p>&copy; Copyright 2022</p>
+        </footer>
+    </body>
+</html>

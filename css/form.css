@@ -1,0 +1,84 @@
+
+form {
+    font-family: 'Source Sans Pro';
+
+    padding: 20px 40px 20px 40px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.60);
+    /*la segunda es para hacer la sombra de abajo mas grande*/
+
+    width: 400px;
+}
+
+img {
+    width: 30px;
+    padding-right: 15px;
+    padding-top: 2px;
+    /* background-color: red; */
+    vertical-align: middle;
+    /* line-height: 10px; */
+    float: left;
+}
+
+button {
+    /* justify-content: left; */
+    /* background-color: green; */
+    /* font-weight: bold; */
+    /* display: grid;
+    grid-template-columns: auto auto; */
+
+    padding-bottom: 2%;
+    border-radius: 12%;
+    font-size: larger;
+
+}
+
+button span {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 12%;
+    font-size: larger;
+    line-height: 30px;
+    float: left;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 8px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+  
+
