@@ -8,8 +8,9 @@ const send = function(ev){
 
     const form = document.getElementById('form');
 
-    let email = form.elements.namedItem('email').value;
-    let message = form.elements.namedItem('message').value;
+    const name = form.elements.namedItem('name').value;
+    const email = form.elements.namedItem('email').value;
+    const message = form.elements.namedItem('message').value;
 
     if (email === '' || message === ''){
         alert('Please fill in the required fields');
@@ -25,7 +26,6 @@ const send = function(ev){
           message => alert(message)
         );
 
-        let name = form.elements.namedItem('name').value;
         alert("Thank you for your message " + name + ", I will reach out to you as soon as possible.");
     }
 }
