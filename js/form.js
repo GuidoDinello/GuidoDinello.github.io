@@ -5,6 +5,13 @@ const init = function(){
 const send = function(ev){
     ev.preventDefault();
 
+    let captcha_response = grecaptcha.getResponse();
+
+    if (captcha_response.length == 0) {
+        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">You must verify the captcha</span>';
+        return;
+    }
+
     const form = document.getElementById('form');
 
     const name = form.elements.namedItem('name').value;
@@ -27,6 +34,10 @@ const send = function(ev){
 
         form.reset();
     }
+}
+
+function recaptcha_callback(){
+    document.getElementById('g-recaptcha-error').innerHTML = '';
 }
 
 
