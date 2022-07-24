@@ -5,10 +5,10 @@ const init = function(){
 const send = function(ev){
     ev.preventDefault(); 
 
-    let github = "6Lf8BxchAAAAAPMf8CudONb27q7xG0JNVf8XJ_5s";
-    let local = "6LdbHxchAAAAAEIvs1veXP29esIR2Cz_YRCSXLj_";
+    //let github = "6Lf8BxchAAAAAPMf8CudONb27q7xG0JNVf8XJ_5s";
+    //let local = "6LdbHxchAAAAAEIvs1veXP29esIR2Cz_YRCSXLj_";
 
-    document.getElementByClassName('g-recaptcha').setAttribute("data-sitekey", github);
+    //document.getElementByClassName('g-recaptcha').setAttribute("data-sitekey", github);
 
     if (grecaptcha.getResponse().length === 0){
         document.getElementById('recaptcha-error').innerHTML = '<span style="color:red;">You must verify the captcha</span>';
