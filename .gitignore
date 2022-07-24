@@ -2,3 +2,8 @@
 # ignore hidden fodlers created by vscode
 .vscode/
 
+# ignore gitignore file
+.gitignore
+
+
+
