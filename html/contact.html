@@ -7,7 +7,8 @@
          
         <link rel="stylesheet" href="../css/styles.css">
         <link rel="stylesheet" href="../css/form.css">
-
+        
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script src="https://smtpjs.com/v3/smtp.js"></script>
         <script src="../js/form.js"></script>
 
@@ -42,6 +43,8 @@
                     <textarea name="message" id="message" cols="30" rows="10"
                     placeholder="Write your message..."
                     tabindex="3"></textarea>
+
+                    <div class="g-recaptcha" data-sitekey="6Lf8BxchAAAAAPMf8CudONb27q7xG0JNVf8XJ_5s"></div>
 
 
                     <button type="submit" id="submitter"><img src="../img/email-solid.png" tabindex="4"><span>Send</span></button>

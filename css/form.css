@@ -80,7 +80,7 @@ button[type="submit"] {
 input[type=submit]:hover {
     background-color: #45a049;
 }
-  
+
 
 .container-items {
     width: 350px;
@@ -93,11 +93,7 @@ input[type=submit]:hover {
     row-gap: 0; */
 }
 
-/* #ty-note {
-    background-color: red;
-    margin: 150px 100% 150px 350%;
-    height: fit-content;
-    border-style: outset;
-    border-radius: 35%;
-    // padding: 15px 20px 15px 20px;
-} */
+.g-recaptcha {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
