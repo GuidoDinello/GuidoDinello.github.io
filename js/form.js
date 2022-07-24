@@ -5,8 +5,12 @@ const init = function(){
 const send = function(ev){
     ev.preventDefault(); 
 
+    let github = "6Lf8BxchAAAAAPMf8CudONb27q7xG0JNVf8XJ_5s";
+    let local = "6LdbHxchAAAAAEIvs1veXP29esIR2Cz_YRCSXLj_";
+
+    document.getElementByClassName('g-recaptcha').setAttribute("data-sitekey", github);
+
     if (grecaptcha.getResponse().length === 0){
-        console.log('not success');
         document.getElementById('recaptcha-error').innerHTML = '<span style="color:red;">You must verify the captcha</span>';
         return;
     }
@@ -21,12 +25,13 @@ const send = function(ev){
         alert('Please fill in the required fields');
     } else {
 
+
         Email.send({
             SecureToken : "acb28ec1-b43c-4892-875f-43fd3475d019",
-            To : 'guido.dinello@gmail.com',
-            From : email,
+            To : "guido.dinello@gmail.com",
+            From : "guidoobolso@gmail.com",
             Subject : "Website Contact Form",
-            Body : name + "<br>" + message
+            Body : name + "<br>" + email + "<br>" + message
         });
 
         alert("Thank you for your message " + name + ", I will reach out to you as soon as possible.");
