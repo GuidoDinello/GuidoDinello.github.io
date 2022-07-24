@@ -1,21 +1,34 @@
-
-var button = document.getElementById('submitter');
-
-button.addEventListener('click', readForm());
-
-function readForm(){
-    const form = document.getElementById('form');
-    const formData = new FormData(form);
-    console.log(formData)
+const init = function(){
+    document.getElementById('submitter').addEventListener('click', send);
+    document.getElementById('form').reset();
 }
 
-// var ty_note = document.getElementById('ty_note'); 
+const send = function(ev){
+    ev.preventDefault();
 
-// ty_note.innerHTML = "Gracias! Tu mensaje ha sido enviado.";
+    const form = document.getElementById('form');
 
-// var inputs = form.getElementsByTagName('input');
-// var textarea = form.getElementsByTagName('textarea');
+    let email = form.elements.namedItem('email').value;
+    let message = form.elements.namedItem('message').value;
 
-// console.log(inputs);
+    if (email === '' || message === ''){
+        alert('Please fill in the required fields');
+    } else {
 
-// alert("Thank you for your message " + inputs[0].value + ", I will reach out to you as soon as possible.");
+        Email.send({
+            SecureToken : "acb28ec1-b43c-4892-875f-43fd3475d019",
+            To : 'guido.dinello@gmail.com',
+            From : email,
+            Subject : "Website Contact Form",
+            Body : name + "<br>" + email + "<br>" + message
+        }).then(
+          message => alert(message)
+        );
+
+        let name = form.elements.namedItem('name').value;
+        alert("Thank you for your message " + name + ", I will reach out to you as soon as possible.");
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', init);
