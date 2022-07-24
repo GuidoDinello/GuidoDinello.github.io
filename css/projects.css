@@ -44,14 +44,27 @@ article.project div {
 }
 
 article.project span.language-tag {
-    background-color: #1fe426;
     /* border-color: black;
     border-width: 25px; */
     border-style: solid;
-    border-color: green;
     border-width: 2px;
     border-radius: 15%;
     padding: 2px 5px; 
+}
+
+.python-tag {
+    background-color: rgba(0, 255, 0, 0.8);
+    border-color: rgba(0, 255, 0, 1);
+}
+
+.bash-tag {
+    background-color: rgba(255, 166, 0, 0.8);
+    border-color: rgba(255, 166, 0, 1);
+}
+
+.cplusplus-tag {
+    background-color: rgba(14, 25, 172, 0.8);
+    border-color: rgba(14, 25, 172, 1);
 }
 
 article.project a {
