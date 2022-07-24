@@ -1,6 +1,5 @@
 const init = function(){
     document.getElementById('submitter').addEventListener('click', send);
-    document.getElementById('form').reset();
 }
 
 const send = function(ev){
@@ -21,12 +20,12 @@ const send = function(ev){
             To : 'guido.dinello@gmail.com',
             From : email,
             Subject : "Website Contact Form",
-            Body : name + "<br>" + email + "<br>" + message
-        }).then(
-          message => alert(message)
-        );
+            Body : name + "<br>" + message
+        });
 
         alert("Thank you for your message " + name + ", I will reach out to you as soon as possible.");
+
+        form.reset();
     }
 }
 
