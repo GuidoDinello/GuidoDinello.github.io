@@ -3,12 +3,11 @@ const init = function(){
 }
 
 const send = function(ev){
-    ev.preventDefault();
+    ev.preventDefault(); 
 
-    let captcha_response = grecaptcha.getResponse();
-
-    if (captcha_response.length == 0) {
-        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">You must verify the captcha</span>';
+    if (grecaptcha.getResponse().length === 0){
+        console.log('not success');
+        document.getElementById('recaptcha-error').innerHTML = '<span style="color:red;">You must verify the captcha</span>';
         return;
     }
 
@@ -32,12 +31,13 @@ const send = function(ev){
 
         alert("Thank you for your message " + name + ", I will reach out to you as soon as possible.");
 
+        grecaptcha.reset();
         form.reset();
     }
 }
 
 function recaptcha_callback(){
-    document.getElementById('g-recaptcha-error').innerHTML = '';
+    document.getElementById('recaptcha-error').innerHTML = '';
 }
 
 
