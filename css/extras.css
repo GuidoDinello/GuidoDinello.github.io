@@ -21,12 +21,21 @@ img {
     margin-bottom: 5%;
 }
 
-.api-video {
+/* .api-video {
     width: 50%;
     display: block;
     margin: auto;
     margin-top: 5%;
     margin-bottom: 5%;
     text-align: center;
-
 }
+
+#chart {
+    width: 400px;
+    height: 400px;
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: white;
+} */
