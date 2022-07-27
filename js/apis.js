@@ -44,10 +44,26 @@ async function main(){
     let json = await getJSONData("https://dog.ceo/api/breeds/image/random");
 
     container[0].innerHTML = `
-        <article class="api">
+        <article class="api-dog">
             <img src="${json.data.message}">
         </article>
-    `
+    `;
+
+    const API_TOKEN = "MjE4NjJfMTY1ODg4Nzc5NF80ZDA2ODdmZDA2ZGYxNmVmNmE5MmQ0M2NjNWEyMWM1ODBmNDU2NGUz";
+    
+    const recent_feed = `https://www.scorebat.com/video-api/v3/feed/?token=${API_TOKEN}`;
+    
+    json = await getJSONData(recent_feed);
+
+    console.log(json.data.response[0].videos);
+
+    container[0].innerHTML += `
+        <article class="api-video">
+            <h2>${json.data.response[0].title}</h2>
+            <h3>${json.data.response[0].competition}</h3>
+            ${json.data.response[0].videos[0].embed}
+        </article>
+        `;
 }
 
 main();
