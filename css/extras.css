@@ -6,7 +6,7 @@
 
 
 img {
-    width: 50%;
+    width: 400px;
     display: block;
     margin: auto;
     margin-top: 5%;
@@ -19,6 +19,12 @@ img {
     margin: auto;
     margin-top: 5%;
     margin-bottom: 5%;
+}
+
+.api-pokemon {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 50px;
 }
 
 /* .api-video {

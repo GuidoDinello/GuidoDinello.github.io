@@ -37,12 +37,23 @@ function getJSONData(url) {
 async function main(){
     let container = document.getElementsByClassName("apis-container");
 
-    let json = await getJSONData("https://dog.ceo/api/breeds/image/random");
+    let json = await getJSONData(`https://pokeapi.co/api/v2/pokemon?&limit=1&offset=${Math.random()*1000}`);
+    let pokemon = await getJSONData(json.data.results[0].url);
     container[0].innerHTML = `
+        <article class="api-pokemon">
+            <h2> ${json.data.results[0].name} </h2>
+            <img src="${pokemon.data.sprites.other.dream_world.front_default}">
+        </article>
+    `;
+
+    json = await getJSONData("https://dog.ceo/api/breeds/image/random");
+    container[0].innerHTML += `
         <article class="api-dog">
             <img src="${json.data.message}">
         </article>
     `;
+
+
 
     // const API_TOKEN = "MjE4NjJfMTY1ODg4Nzc5NF80ZDA2ODdmZDA2ZGYxNmVmNmE5MmQ0M2NjNWEyMWM1ODBmNDU2NGUz";
     // const recent_feed = `https://www.scorebat.com/video-api/v3/feed/?token=${API_TOKEN}`;
